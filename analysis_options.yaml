@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    public_member_api_docs: false
+    one_member_abstracts: false
+    avoid_classes_with_only_static_members: false
+    prefer_const_constructors: false
+    prefer_const_constructors_in_immutables: false
+    use_key_in_widget_constructors: false
+    prefer_relative_imports: true
+    directives_ordering: true
