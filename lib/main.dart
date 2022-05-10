@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Flutter Demo',
         theme: theme,
+        debugShowCheckedModeBanner: false,
         home: WrapperPage(),
         onGenerateRoute: (settings) {
           switch (settings.name) {
