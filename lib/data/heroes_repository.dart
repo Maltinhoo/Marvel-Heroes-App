@@ -17,8 +17,7 @@ class HeroesRepository {
     //     .map((e) => CharacterModel.fromJson(e))
     //     .toList();
     final response = await rootBundle.loadString('assets/application.json');
-    final allHeroes = json
-        .decode(response)['heroes']
+    final List<HeroModel> allHeroes = (json.decode(response)['heroes'] as List)
         .map((e) => HeroModel.fromJson(e))
         .toList();
     return allHeroes;

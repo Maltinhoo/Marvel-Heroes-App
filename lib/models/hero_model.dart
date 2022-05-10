@@ -17,7 +17,7 @@ class HeroModel {
     this.biography,
     this.caracteristicModel,
     this.abilityModel,
-    this.movies,
+    this.movies = const [],
   });
 
   HeroModel.fromJson(Map<String, dynamic> json) {
@@ -27,6 +27,6 @@ class HeroModel {
     biography = json['biography'];
     caracteristicModel = CaracteristicModel.fromJson(json['caracteristics']);
     abilityModel = AbilityModel.fromJson(json['abilities']);
-    movies = (json['movies'] as List<String>).map((e) => e).toList();
+    movies = (json['movies'] as List<dynamic>).map((e) => e).toList();
   }
 }
