@@ -15,9 +15,13 @@ class HomeCubit extends Cubit<HomeState> {
 
   void initialize() async {
     try {
+      emit(HomeState(isLoading: true));
       final listHeroes = await heroesRepository.getAll();
       print(listHeroes);
-    } catch (e) {}
+      emit(HomeState(isLoading: false, heroes: listHeroes));
+    } catch (e) {
+      emit(HomeState(isLoading: false, error: e.toString()));
+    }
   }
 
   void logout() async {

@@ -13,7 +13,25 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Home')),
+        appBar: AppBar(
+          title: Center(
+              child: Image.asset('assets/logotipoMarvel.png', width: 100)),
+          leading: IconButton(
+              icon: Icon(
+                Icons.list,
+                color: Colors.black,
+              ),
+              onPressed: () {}),
+          actions: [
+            IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.black,
+              ),
+              onPressed: () {},
+            )
+          ],
+        ),
         body: BlocProvider(
             create: (context) => GetIt.I.get<HomeCubit>()..initialize(),
             child: HomeContent()));

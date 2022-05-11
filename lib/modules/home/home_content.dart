@@ -20,12 +20,15 @@ class HomeContent extends StatelessWidget {
         }
       },
       child: BlocBuilder<HomeCubit, HomeState>(
-          builder: (context, state) => Center(
-              child: OutlinedButton(
-                  onPressed: state.exited
-                      ? null
-                      : () => BlocProvider.of<HomeCubit>(context).logout(),
-                  child: Text('SAIR')))),
+          builder: (context, state) => Column(
+                children: [
+                  Text('Bem vindo ao Marvel Heroes'),
+                  Text('Escolha o seu personagem'),
+                  CircleAvatar(
+                    child: Image.asset('assets/chars/black-panther.png'),
+                  )
+                ],
+              )),
     );
   }
 }
