@@ -22,7 +22,7 @@ dependencies:
   dio: 4.0.0
   shared_preferences: 2.0.7
   flutter_slider_drawer: ^2.1.1
-  flutter_svg: ^1.0.3
+  google_fonts: ^2.3.2
 
 dev_dependencies:
   flutter_driver:
@@ -43,6 +43,30 @@ flutter_icons:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: GilroyBold
+      fonts:
+        - asset: fonts/gilroy-bold.ttf
+    - family: GilroyHeavy
+      fonts:
+        - asset: assets/fonts/Gilroy-heavy.ttf
+    - family: GilroyMedium
+      fonts:
+        - asset: assets/fonts/Gilroy-medium.ttf
+    - family: GilroyRegular
+      fonts:
+        - asset: assets/fonts/Gilroy-regular.ttf
+    - family: GilroySemiBold
+      fonts:
+        - asset: assets/fonts/Gilroy-semibold.ttf
+
+
+
   assets:
     - assets/
+    - assets/icons/
+    - assets/chars/
+    - assets/movies/
+    - assets/fonts/
     - .env

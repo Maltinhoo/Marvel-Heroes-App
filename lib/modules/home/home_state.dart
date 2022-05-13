@@ -7,7 +7,7 @@ class HomeState extends Equatable {
   final bool exited;
   final bool isLoading;
   final String? error;
-  final List<HeroModel>? heroes;
+  final List<HeroModel> heroes;
 
   HomeState({
     this.isLoading = false,

@@ -11,7 +11,7 @@ class HeroesRepository {
 
   HeroesRepository({required this.dio});
 
-  Future<List<HeroModel>> getAll() async {
+  Future<List<HeroModel>> getAllHeroes() async {
     try {
       // final response = await dio.get(
       //     'characters?ts=1652136795179&apikey=837252d7169267eac0014f907597f135&hash=13b8d3517cfaaccf138892101d052094');
