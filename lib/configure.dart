@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/heroes_repository.dart';
 import 'data/user_repository.dart';
+import 'data/villain_repository.dart';
 import 'environment.dart';
 import 'modules/home/home_cubit.dart';
 import 'modules/login/login_cubit.dart';
@@ -35,5 +36,6 @@ Future<void> configure() async {
     heroesRepository: HeroesRepository(
       dio: GetIt.I.get<Dio>(),
     ),
+    villainRepository: VillainRepository(),
   ));
 }

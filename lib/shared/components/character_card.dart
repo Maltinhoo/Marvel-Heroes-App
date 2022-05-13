@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../models/hero_model.dart';
+import '../../models/character_model.dart';
 
 class CharacterCard extends StatelessWidget {
   final BoxConstraints constraints;
-  final HeroModel heroModel;
+  final CharacterModel charModel;
 
   const CharacterCard(
-      {Key? key, required this.constraints, required this.heroModel})
+      {Key? key, required this.constraints, required this.charModel})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(right: 12),
       child: Stack(alignment: Alignment.bottomCenter, children: [
         Container(
           height: constraints.maxHeight * 0.38,
@@ -30,7 +30,7 @@ class CharacterCard extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             child: Image.asset(
-              heroModel.imagePath ?? 'Indisponivel',
+              charModel.imagePath ?? 'Indisponivel',
               fit: BoxFit.fill,
             ),
           ),
@@ -50,10 +50,10 @@ class CharacterCard extends StatelessWidget {
               ]),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(heroModel.alterEgo ?? 'Indisponivel',
+            Text(charModel.alterEgo ?? 'Indisponivel',
                 style: TextStyle(fontSize: 12, color: Colors.grey)),
             Text(
-              heroModel.name ?? 'Indisponivel',
+              charModel.name ?? 'Indisponivel',
               style: TextStyle(
                   fontFamily: 'GilroyHeavy', fontSize: 20, color: Colors.white),
             )

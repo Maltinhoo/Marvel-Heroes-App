@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../shared/components/character_card.dart';
 import '../login/login_page.dart';
 import 'components/category_row.dart';
+import 'components/common_row.dart';
 import 'home_cubit.dart';
 import 'home_state.dart';
 
@@ -49,27 +50,7 @@ class HomeContent extends StatelessWidget {
                         SizedBox(height: constraints.maxHeight * 0.05),
                         CategoryRow(constraints: constraints),
                         SizedBox(height: constraints.maxHeight * 0.05),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text(
-                              'Heróis',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.red,
-                                  fontFamily: 'GilroyBold',
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              'Ver tudo',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.grey,
-                                  fontFamily: 'GilroyMedium',
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
+                        CommonRow(title: 'Heróis'),
                         SizedBox(
                           height: constraints.maxHeight * 0.4,
                           width: constraints.maxWidth * 1,
@@ -79,7 +60,21 @@ class HomeContent extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return CharacterCard(
                                     constraints: constraints,
-                                    heroModel: state.heroes[index]);
+                                    charModel: state.heroes[index]);
+                              }),
+                        ),
+                        SizedBox(height: constraints.maxHeight * 0.05),
+                        CommonRow(title: 'Vilões'),
+                        SizedBox(
+                          height: constraints.maxHeight * 0.4,
+                          width: constraints.maxWidth * 1,
+                          child: ListView.builder(
+                              itemCount: state.villains.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return CharacterCard(
+                                    constraints: constraints,
+                                    charModel: state.villains[index]);
                               }),
                         )
                       ],
