@@ -16,7 +16,7 @@ class CharacterCard extends StatelessWidget {
       padding: const EdgeInsets.only(right: 12),
       child: Stack(alignment: Alignment.bottomCenter, children: [
         Container(
-          height: constraints.maxHeight * 0.38,
+          height: constraints.maxHeight * 0.4,
           width: constraints.maxWidth * 0.4,
           decoration: BoxDecoration(
               color: Colors.black,

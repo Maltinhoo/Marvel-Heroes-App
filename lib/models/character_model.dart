@@ -1,5 +1,5 @@
 import 'ability_model.dart';
-import 'caracterustic_model.dart';
+import 'caracteristic_model.dart';
 
 class CharacterModel {
   String? name;

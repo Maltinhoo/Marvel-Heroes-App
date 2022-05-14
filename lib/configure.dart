@@ -7,11 +7,9 @@ import 'data/alien_repository.dart';
 import 'data/anti_hero_repository.dart';
 import 'data/heroes_repository.dart';
 import 'data/human_repository.dart';
-import 'data/user_repository.dart';
 import 'data/villain_repository.dart';
 import 'environment.dart';
 import 'modules/home/home_cubit.dart';
-import 'modules/login/login_cubit.dart';
 import 'modules/wrapper/wrapper_cubit.dart';
 import 'shared/services/user_service.dart';
 
@@ -27,11 +25,6 @@ Future<void> configure() async {
 
   GetIt.I.registerSingleton<WrapperCubit>(WrapperCubit(
     userService: GetIt.I.get<UserService>(),
-  ));
-
-  GetIt.I.registerSingleton<LoginCubit>(LoginCubit(
-    userService: GetIt.I.get<UserService>(),
-    userRepository: UserRepository(dio: GetIt.I.get<Dio>()),
   ));
 
   GetIt.I.registerSingleton<HomeCubit>(HomeCubit(

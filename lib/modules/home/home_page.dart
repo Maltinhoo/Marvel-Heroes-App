@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          elevation: 0,
           title: Center(
               child: Image.asset('assets/logotipoMarvel.png', width: 100)),
           leading: IconButton(

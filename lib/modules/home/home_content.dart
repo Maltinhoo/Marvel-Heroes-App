@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../shared/components/character_card.dart';
-import '../login/login_page.dart';
 import 'components/category_row.dart';
 import 'components/common_row.dart';
 import 'home_cubit.dart';
@@ -17,12 +16,7 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return BlocListener<HomeCubit, HomeState>(
-        listener: (context, state) {
-          if (state.exited) {
-            Navigator.pushNamedAndRemoveUntil(
-                context, LoginPage.route, (route) => false);
-          }
-        },
+        listener: (context, state) {},
         child: BlocBuilder<HomeCubit, HomeState>(
             builder: (context, state) => Padding(
                   padding: const EdgeInsets.all(12),
