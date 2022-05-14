@@ -54,7 +54,7 @@ class HomeContent extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return CharacterCard(
                                     constraints: constraints,
-                                    charModel: state.heroes[index]);
+                                    characterModel: state.heroes[index]);
                               }),
                         ),
                         SizedBox(height: constraints.maxHeight * 0.05),
@@ -68,7 +68,7 @@ class HomeContent extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return CharacterCard(
                                     constraints: constraints,
-                                    charModel: state.villains[index]);
+                                    characterModel: state.villains[index]);
                               }),
                         ),
                         SizedBox(height: constraints.maxHeight * 0.05),
@@ -82,7 +82,7 @@ class HomeContent extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return CharacterCard(
                                     constraints: constraints,
-                                    charModel: state.antiheroes[index]);
+                                    characterModel: state.antiheroes[index]);
                               }),
                         ),
                         SizedBox(height: constraints.maxHeight * 0.05),
@@ -96,7 +96,7 @@ class HomeContent extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return CharacterCard(
                                     constraints: constraints,
-                                    charModel: state.aliens[index]);
+                                    characterModel: state.aliens[index]);
                               }),
                         ),
                         SizedBox(height: constraints.maxHeight * 0.05),
@@ -110,7 +110,7 @@ class HomeContent extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 return CharacterCard(
                                     constraints: constraints,
-                                    charModel: state.humans[index]);
+                                    characterModel: state.humans[index]);
                               }),
                         ),
                       ],

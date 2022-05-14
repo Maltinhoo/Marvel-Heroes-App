@@ -9,6 +9,7 @@ import 'data/heroes_repository.dart';
 import 'data/human_repository.dart';
 import 'data/villain_repository.dart';
 import 'environment.dart';
+import 'modules/character/character_cubit.dart';
 import 'modules/home/home_cubit.dart';
 import 'modules/wrapper/wrapper_cubit.dart';
 import 'shared/services/user_service.dart';
@@ -37,4 +38,6 @@ Future<void> configure() async {
     antiHeroRepository: AntiHeroRepository(),
     humanRepository: HumanRepository(),
   ));
+
+  GetIt.I.registerFactory<CharacterCubit>(() => CharacterCubit());
 }
