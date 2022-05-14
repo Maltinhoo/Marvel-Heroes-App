@@ -47,7 +47,7 @@ flutter:
   fonts:
     - family: GilroyBold
       fonts:
-        - asset: fonts/gilroy-bold.ttf
+        - asset: assets/fonts/gilroy-bold.ttf
     - family: GilroyHeavy
       fonts:
         - asset: assets/fonts/Gilroy-heavy.ttf

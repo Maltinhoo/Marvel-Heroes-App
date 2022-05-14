@@ -76,7 +76,49 @@ class HomeContent extends StatelessWidget {
                                     constraints: constraints,
                                     charModel: state.villains[index]);
                               }),
-                        )
+                        ),
+                        SizedBox(height: constraints.maxHeight * 0.05),
+                        CommonRow(title: 'Anti-Heróis'),
+                        SizedBox(
+                          height: constraints.maxHeight * 0.4,
+                          width: constraints.maxWidth * 1,
+                          child: ListView.builder(
+                              itemCount: state.antiheroes.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return CharacterCard(
+                                    constraints: constraints,
+                                    charModel: state.antiheroes[index]);
+                              }),
+                        ),
+                        SizedBox(height: constraints.maxHeight * 0.05),
+                        CommonRow(title: 'Alienígenas'),
+                        SizedBox(
+                          height: constraints.maxHeight * 0.4,
+                          width: constraints.maxWidth * 1,
+                          child: ListView.builder(
+                              itemCount: state.aliens.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return CharacterCard(
+                                    constraints: constraints,
+                                    charModel: state.aliens[index]);
+                              }),
+                        ),
+                        SizedBox(height: constraints.maxHeight * 0.05),
+                        CommonRow(title: 'Humanos'),
+                        SizedBox(
+                          height: constraints.maxHeight * 0.4,
+                          width: constraints.maxWidth * 1,
+                          child: ListView.builder(
+                              itemCount: state.humans.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return CharacterCard(
+                                    constraints: constraints,
+                                    charModel: state.humans[index]);
+                              }),
+                        ),
                       ],
                     ),
                   ),

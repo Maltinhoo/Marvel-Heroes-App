@@ -17,14 +17,16 @@ class CommonRow extends StatelessWidget {
               fontFamily: 'GilroyBold',
               fontWeight: FontWeight.bold),
         ),
-        Text(
-          'Ver tudo',
-          style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey,
-              fontFamily: 'GilroyMedium',
-              fontWeight: FontWeight.bold),
-        ),
+        TextButton(
+            onPressed: () {},
+            child: Text(
+              'Ver tudo',
+              style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                  fontFamily: 'GilroyMedium',
+                  fontWeight: FontWeight.bold),
+            )),
       ],
     );
   }

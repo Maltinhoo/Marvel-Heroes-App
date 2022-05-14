@@ -3,7 +3,10 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'data/alien_repository.dart';
+import 'data/anti_hero_repository.dart';
 import 'data/heroes_repository.dart';
+import 'data/human_repository.dart';
 import 'data/user_repository.dart';
 import 'data/villain_repository.dart';
 import 'environment.dart';
@@ -37,5 +40,8 @@ Future<void> configure() async {
       dio: GetIt.I.get<Dio>(),
     ),
     villainRepository: VillainRepository(),
+    alienRepository: AlienRepository(),
+    antiHeroRepository: AntiHeroRepository(),
+    humanRepository: HumanRepository(),
   ));
 }

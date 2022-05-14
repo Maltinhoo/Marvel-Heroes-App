@@ -9,8 +9,14 @@ class HomeState extends Equatable {
   final String? error;
   final List<CharacterModel> heroes;
   final List<CharacterModel> villains;
+  final List<CharacterModel> antiheroes;
+  final List<CharacterModel> aliens;
+  final List<CharacterModel> humans;
 
   HomeState({
+    this.antiheroes = const [],
+    this.aliens = const [],
+    this.humans = const [],
     this.isLoading = false,
     this.error,
     this.heroes = const [],
@@ -20,6 +26,15 @@ class HomeState extends Equatable {
   });
 
   @override
-  List<Object?> get props =>
-      [exiting, exited, isLoading, error, heroes, villains];
+  List<Object?> get props => [
+        exiting,
+        exited,
+        isLoading,
+        error,
+        heroes,
+        villains,
+        antiheroes,
+        aliens,
+        humans
+      ];
 }
