@@ -8,7 +8,7 @@ class CharacterModel {
   String? biography;
   CaracteristicModel? caracteristicModel;
   AbilityModel? abilityModel;
-  List<dynamic>? movies;
+  List<String>? movies;
 
   CharacterModel({
     this.name,
@@ -27,6 +27,8 @@ class CharacterModel {
     biography = json['biography'];
     caracteristicModel = CaracteristicModel.fromJson(json['caracteristics']);
     abilityModel = AbilityModel.fromJson(json['abilities']);
-    movies = (json['movies'] as List<dynamic>).map((e) => e).toList();
+    movies = (json['movies'] as List<dynamic>)
+        .map((movie) => movie.toString())
+        .toList();
   }
 }

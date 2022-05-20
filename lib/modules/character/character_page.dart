@@ -26,13 +26,16 @@ class CharacterPage extends StatelessWidget {
                 SliverAppBar(
                   backgroundColor: Colors.transparent,
                   expandedHeight: constraints.maxHeight * .5,
+                  pinned: true,
+                  floating: false,
+                  snap: false,
                   flexibleSpace: FlexibleSpaceBar(
                     title: Align(
                       alignment: Alignment.bottomLeft,
                       child: Container(
                           color: Colors.transparent,
-                          width: constraints.maxWidth * .4,
-                          height: constraints.maxHeight * .06,
+                          // width: constraints.maxWidth * .4,
+                          height: constraints.maxHeight * .051,
                           child: Column(children: [
                             Text(
                               characterModel.alterEgo!,
